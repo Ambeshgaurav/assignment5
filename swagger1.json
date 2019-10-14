@@ -1,0 +1,83 @@
+{ 
+"swagger": "2.0", 
+"info": { 
+"version": "1.0.0", 
+"description": "sample api login logout", 
+"title": "sample api" 
+}, 
+"host": "localhost:3000", 
+"basePath": "/", 
+"schemes": [ 
+"http" 
+], 
+"paths": { 
+"/users/signup": { 
+"post": { 
+"description": "Creates a user in the database", 
+"parameters": [ 
+{ 
+"type": "string", 
+"description": "user email id ", 
+"name": "user email id ", 
+"in": "formData", 
+"example": "shubham" 
+}, 
+{ 
+"type": "string", 
+"description": "Password", 
+"name": "password", 
+"in": "formData", 
+"example": "12345" 
+} 
+], 
+"responses": { 
+"200": { 
+"description" : "successfully signed up." 
+} 
+} 
+}, 
+"get": { 
+"description": "Creates a user in the database", 
+
+"responses": { 
+"200": { 
+"description" : "response template render" 
+} 
+} 
+} 
+}, 
+"/users/login": { 
+"post": { 
+"description": "Logs in a user", 
+"parameters": [ 
+{ 
+"type": "string", 
+"description": "Username of user", 
+"name": "username", 
+"in": "formData" 
+}, 
+{ 
+"type": "password", 
+"description": "Password", 
+"name": "password", 
+"in": "formData" 
+} 
+], 
+"responses": { 
+"200": { 
+"description" : "successfully logged in." 
+} 
+} 
+}, 
+"get": { 
+"description": "reading from table", 
+"responses": { 
+"200": { 
+"description": "response template render" 
+} 
+} 
+} 
+
+} 
+} 
+}
